@@ -1,0 +1,472 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7471365565925583973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd667873e078c146a6791139ff55775, type: 3}
+  m_Name: Dialog Node
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -568, y: -328}
+  ports:
+    keys:
+    - Input
+    - Option1Output
+    - Option2Output
+    - Option3Output
+    - Option4Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -7471365565925583973}
+      _typeQualifiedName: XNode.Node, XNode, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Option1Output
+      _node: {fileID: -7471365565925583973}
+      _typeQualifiedName: XNode.Node, XNode, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -964018028105587813}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Option2Output
+      _node: {fileID: -7471365565925583973}
+      _typeQualifiedName: XNode.Node, XNode, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 711863782024874506}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Option3Output
+      _node: {fileID: -7471365565925583973}
+      _typeQualifiedName: XNode.Node, XNode, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Option4Output
+      _node: {fileID: -7471365565925583973}
+      _typeQualifiedName: XNode.Node, XNode, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  Input: {fileID: 0}
+  Headline: Meeting
+  Description: How have you been?
+  Option1: Fine
+  Option1Output: {fileID: -964018028105587813}
+  Option2: Get to the point..
+  Option2Output: {fileID: 711863782024874506}
+  Option3: 
+  Option3Output: {fileID: 0}
+  Option4: 
+  Option4Output: {fileID: 0}
+  Hide: 0
+--- !u!114 &-5998714435776795552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd667873e078c146a6791139ff55775, type: 3}
+  m_Name: Dialog Node
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 424, y: -712}
+  ports:
+    keys:
+    - Input
+    - Option1Output
+    - Option2Output
+    - Option3Output
+    - Option4Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -5998714435776795552}
+      _typeQualifiedName: XNode.Node, XNode, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Option1Output
+        node: {fileID: -964018028105587813}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Option1Output
+      _node: {fileID: -5998714435776795552}
+      _typeQualifiedName: XNode.Node, XNode, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 6185564711656279242}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Option2Output
+      _node: {fileID: -5998714435776795552}
+      _typeQualifiedName: XNode.Node, XNode, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 711863782024874506}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Option3Output
+      _node: {fileID: -5998714435776795552}
+      _typeQualifiedName: XNode.Node, XNode, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Option4Output
+      _node: {fileID: -5998714435776795552}
+      _typeQualifiedName: XNode.Node, XNode, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  Input: {fileID: 0}
+  Headline: Meeting
+  Description: "I'm fine, thanks for asking. \nIf you want, we can switch the topic
+    to the job."
+  Option1: <color=red>Keep Talking..</color>
+  Option1Output: {fileID: 6185564711656279242}
+  Option2: What is the job?
+  Option2Output: {fileID: 711863782024874506}
+  Option3: 
+  Option3Output: {fileID: 0}
+  Option4: 
+  Option4Output: {fileID: 0}
+  Hide: 0
+--- !u!114 &-964018028105587813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd667873e078c146a6791139ff55775, type: 3}
+  m_Name: Dialog Node
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -24, y: -552}
+  ports:
+    keys:
+    - Input
+    - Option1Output
+    - Option2Output
+    - Option3Output
+    - Option4Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -964018028105587813}
+      _typeQualifiedName: XNode.Node, XNode, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Option1Output
+        node: {fileID: -7471365565925583973}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Option1Output
+      _node: {fileID: -964018028105587813}
+      _typeQualifiedName: XNode.Node, XNode, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -5998714435776795552}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Option2Output
+      _node: {fileID: -964018028105587813}
+      _typeQualifiedName: XNode.Node, XNode, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 711863782024874506}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Option3Output
+      _node: {fileID: -964018028105587813}
+      _typeQualifiedName: XNode.Node, XNode, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Option4Output
+      _node: {fileID: -964018028105587813}
+      _typeQualifiedName: XNode.Node, XNode, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  Input: {fileID: 0}
+  Headline: Meeting
+  Description: I'm glad that you're well.
+  Option1: How are you?
+  Option1Output: {fileID: -5998714435776795552}
+  Option2: Talk About Job
+  Option2Output: {fileID: 711863782024874506}
+  Option3: 
+  Option3Output: {fileID: 0}
+  Option4: 
+  Option4Output: {fileID: 0}
+  Hide: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a19ebfd15906bf44eacb596c89ecd58c, type: 3}
+  m_Name: ExampleDialogGraph
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -964018028105587813}
+  - {fileID: -7471365565925583973}
+  - {fileID: 711863782024874506}
+  - {fileID: -5998714435776795552}
+  - {fileID: 6185564711656279242}
+  - {fileID: 1611036424239828246}
+--- !u!114 &711863782024874506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd667873e078c146a6791139ff55775, type: 3}
+  m_Name: Dialog Node
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1384, y: -136}
+  ports:
+    keys:
+    - Input
+    - Option1Output
+    - Option2Output
+    - Option3Output
+    - Option4Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: 711863782024874506}
+      _typeQualifiedName: XNode.Node, XNode, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Option2Output
+        node: {fileID: -7471365565925583973}
+        reroutePoints: []
+      - fieldName: Option2Output
+        node: {fileID: -964018028105587813}
+        reroutePoints: []
+      - fieldName: Option2Output
+        node: {fileID: -5998714435776795552}
+        reroutePoints: []
+      - fieldName: Option1Output
+        node: {fileID: 6185564711656279242}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Option1Output
+      _node: {fileID: 711863782024874506}
+      _typeQualifiedName: XNode.Node, XNode, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Option2Output
+      _node: {fileID: 711863782024874506}
+      _typeQualifiedName: XNode.Node, XNode, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 1611036424239828246}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Option3Output
+      _node: {fileID: 711863782024874506}
+      _typeQualifiedName: XNode.Node, XNode, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Option4Output
+      _node: {fileID: 711863782024874506}
+      _typeQualifiedName: XNode.Node, XNode, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  Input: {fileID: 0}
+  Headline: Meeting - Final
+  Description: 'You have to assasinate the mayor.
+
+'
+  Option1: Okay
+  Option1Output: {fileID: 0}
+  Option2: Test Switching
+  Option2Output: {fileID: 1611036424239828246}
+  Option3: 
+  Option3Output: {fileID: 0}
+  Option4: 
+  Option4Output: {fileID: 0}
+  Hide: 0
+--- !u!114 &1611036424239828246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb0919608f8566544b314ee2bfad9b66, type: 3}
+  m_Name: Dialog Switcher
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1736, y: 120}
+  ports:
+    keys:
+    - Input
+    values:
+    - _fieldName: Input
+      _node: {fileID: 1611036424239828246}
+      _typeQualifiedName: XNode.Node, XNode, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Option2Output
+        node: {fileID: 711863782024874506}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  Input: {fileID: 711863782024874506}
+  NextDialogGraph: {fileID: 11400000, guid: 2347677bc6c995b4491bc54a105e8c31, type: 2}
+--- !u!114 &6185564711656279242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd667873e078c146a6791139ff55775, type: 3}
+  m_Name: Dialog Node
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 888, y: -808}
+  ports:
+    keys:
+    - Input
+    - Option1Output
+    - Option2Output
+    - Option3Output
+    - Option4Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: 6185564711656279242}
+      _typeQualifiedName: XNode.Node, XNode, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Option1Output
+        node: {fileID: -5998714435776795552}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Option1Output
+      _node: {fileID: 6185564711656279242}
+      _typeQualifiedName: XNode.Node, XNode, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 711863782024874506}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Option2Output
+      _node: {fileID: 6185564711656279242}
+      _typeQualifiedName: XNode.Node, XNode, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Option3Output
+      _node: {fileID: 6185564711656279242}
+      _typeQualifiedName: XNode.Node, XNode, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Option4Output
+      _node: {fileID: 6185564711656279242}
+      _typeQualifiedName: XNode.Node, XNode, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  Input: {fileID: 0}
+  Headline: Meeting
+  Description: 'I dont have much time..
+
+    Let''s switch the topic to the job.'
+  Option1: What is the job?
+  Option1Output: {fileID: 711863782024874506}
+  Option2: 
+  Option2Output: {fileID: 0}
+  Option3: 
+  Option3Output: {fileID: 0}
+  Option4: 
+  Option4Output: {fileID: 0}
+  Hide: 0
