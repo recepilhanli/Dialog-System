@@ -30,4 +30,5 @@ This is a node-based dialog system built using the <a href = "https://github.com
 - **Dialog Switcher Node**: Handles transitions between different dialog graphs.
 - **Dialog Event Node**: Invokes the event contained within it.
 
-### Example
+### Example Video
+[![Gameplay Video](https://img.youtube.com/vi/TIRutcHgOVo/0.jpg)](https://www.youtube.com/watch?v=TIRutcHgOVo)
