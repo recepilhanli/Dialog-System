@@ -1,53 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-using XNode;
-using XNodeEditor;
-using static XNode.Node;
+
+
+
 
 namespace DialogSystem
 {
-	/// <summary>
-	/// This node is used to create a dialog sequence
-	/// </summary>
-	[NodeWidth(300), NodeTint("#506f7f")]
-	public class DialogNode : Node
-	{
 
-		[Input] public Node Input;
-
-		public string Headline;
-		public string Description;
-
-		public string Option1;
-		[Output] public Node Option1Output;
-
-		public string Option2;
-		[Output] public Node Option2Output;
-
-		public string Option3;
-		[Output] public Node Option3Output;
-
-		public string Option4;
-		[Output] public Node Option4Output;
-
-		public bool Hide = false;
-
-		protected override void Init()
-		{
-			base.Init();
-
-			name = "Dialog Node";
-
-		}
-
-
-	}
-
-
-
-
+#region  Editor
+#if UNITY_EDITOR
+	using XNode;
+	using XNodeEditor;
+	//Dialogue Node Editor
 	[CustomNodeEditor(typeof(DialogNode))]
 	public class DialogNodeEditor : NodeEditor
 	{
@@ -109,10 +73,10 @@ namespace DialogSystem
 					node.Hide = true;
 				}
 
-				var dgraph = node.graph as DialogGraph;
-				if (dgraph != null)
+				var dGraph = node.graph as DialogGraph;
+				if (dGraph != null)
 				{
-					var firstNode = dgraph.GetFirstNode();
+					var firstNode = dGraph.GetFirstNode();
 					if (firstNode == node)
 					{
 						GUI.color = Color.red;
@@ -135,10 +99,10 @@ namespace DialogSystem
 					node.Hide = false;
 				}
 
-				var dgraph = node.graph as DialogGraph;
-				if (dgraph != null)
+				var dGraph = node.graph as DialogGraph;
+				if (dGraph != null)
 				{
-					var firstNode = dgraph.GetFirstNode();
+					var firstNode = dGraph.GetFirstNode();
 					if (firstNode == node)
 					{
 						GUI.color = Color.yellow;
@@ -154,6 +118,55 @@ namespace DialogSystem
 
 
 	}
+#endif
+#endregion
+
+	/// <summary>
+	/// This node is used to create a dialog sequence
+	/// </summary>
+	[NodeWidth(300), NodeTint("#506f7f")]
+	public class DialogNode : Node
+	{
+
+		[Input] public Node Input; // The input node
+
+		public string Headline; // The headline of the dialog
+		public string Description; // The description of the dialog
+
+		#region  Options
+		public string Option1;
+		[Output] public Node Option1Output;
+
+		public string Option2;
+		[Output] public Node Option2Output;
+
+		public string Option3;
+		[Output] public Node Option3Output;
+
+		public string Option4;
+		[Output] public Node Option4Output;
+		#endregion
+
+		public bool Hide = false; // Hide the options
+
+		/// <summary>
+		/// Initialize the node
+		/// </summary>
+		protected override void Init()
+		{
+			base.Init();
+
+			name = "Dialog Node";
+
+		}
+
+
+	}
+
+
+
+
+
 
 
 }

@@ -1,36 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 using XNode;
-using XNodeEditor;
 
 namespace DialogSystem
 {
-	/// <summary>
-	/// 
-	/// </summary>
-	
-	[NodeWidth(350), NodeTint("#ff7f50")]
-	public class DialogEvent : Node
-	{
-		[Input] public Node Input;
 
-		[Output] public Node Output;
+	#region Editor
+#if UNITY_EDITOR
+	using UnityEditor;
+	using XNodeEditor;
 
-		public UnityEvent Event = new UnityEvent();
-
-		public void InvokeEvent()
-		{
-			Event?.Invoke();
-		}
-
-
-
-	}
-
-
+	//Dialogue Event Node Editor
 	[CustomNodeEditor(typeof(DialogEvent))]
 	public class DialogEventEditor : NodeEditor
 	{
@@ -58,4 +38,41 @@ namespace DialogSystem
 			serializedObject.ApplyModifiedProperties();
 		}
 	}
+#endif
+	#endregion
+
+
+	/// <summary>
+	/// This node is used to invoke a UnityEvent
+	/// </summary>
+	[NodeWidth(350), NodeTint("#ff7f50")]
+	public class DialogEvent : Node
+	{
+		/// <summary>
+		/// The input node
+		/// </summary>
+		[Input] public Node Input;
+
+		/// <summary>
+		/// The output node
+		/// </summary>
+		[Output] public Node Output;
+
+		/// <summary>
+		/// The event that will be invoked
+		/// </summary>
+		public UnityEvent Event = new UnityEvent();
+
+		/// <summary>
+		/// This method is used to invoke the event
+		/// </summary>
+		public void InvokeEvent()
+		{
+			Event?.Invoke();
+		}
+
+
+
+	}
+
 }

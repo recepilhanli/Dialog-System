@@ -123,8 +123,7 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: -8642161715027127687, guid: ddf806041374b3d47b5f4b11f9505ced,
-          type: 3}
+      - m_Target: {fileID: -8642161715027127687, guid: ddf806041374b3d47b5f4b11f9505ced, type: 3}
         m_TargetAssemblyTypeName: EventTesting, Assembly-CSharp
         m_MethodName: TestEvent
         m_Mode: 1

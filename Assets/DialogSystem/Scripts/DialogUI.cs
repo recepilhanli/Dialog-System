@@ -1,16 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using DialogSystem;
 using XNode;
 using TMPro;
+
 
 public class DialogUI : MonoBehaviour
 {
     public DialogGraph dialogGraph;
     [HideInInspector] public Node currentNode;
 
-    [SerializeField] private GameObject _DialogCanvas;
+    [SerializeField] private GameObject _dialogCanvas;
     [SerializeField] private TextMeshProUGUI headlineTMP;
     [SerializeField] private TextMeshProUGUI descriptionTMP;
 
@@ -19,13 +18,15 @@ public class DialogUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI option3TMP;
     [SerializeField] private TextMeshProUGUI option4TMP;
 
-
     private void Awake()
     {
         currentNode = dialogGraph.GetFirstNode();
         UpdateUI();
     }
 
+    /// <summary>
+    /// This method is used to update the buttons
+    /// </summary>
     void UpdateButtons()
     {
         if (option1TMP.text == string.Empty)
@@ -65,7 +66,9 @@ public class DialogUI : MonoBehaviour
         }
     }
 
-
+    /// <summary>
+    /// This method is used to update the UI
+    /// </summary>
     private void UpdateUI()
     {
         DialogNode dialogNode = currentNode as DialogNode;
@@ -83,12 +86,18 @@ public class DialogUI : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// This method is used to open the dialog
+    /// </summary>
     void CloseDialog()
     {
-        _DialogCanvas.SetActive(false);
+        _dialogCanvas.SetActive(false);
     }
 
-
+    /// <summary>
+    /// This method is used to open the dialog
+    /// </summary>
+    /// <param name="option"> The option that was selected </param>
     public void SelectOption(int option)
     {
         Node node = GetNextNodeOfDialogOption(option);
@@ -135,7 +144,11 @@ public class DialogUI : MonoBehaviour
         CloseDialog();
 
     }
-
+    
+    /// <summary>
+    /// This method is used to switch to a new dialog graph
+    /// </summary>
+    /// <param name="graph">The new dialog graph </param>
     void SwitchNewDialogGraph(DialogGraph graph)
     {
         dialogGraph = graph;
@@ -143,6 +156,10 @@ public class DialogUI : MonoBehaviour
         UpdateUI();
     }
 
+    /// <summary>
+    /// This method is used to initialize the next dialog node
+    /// </summary>
+    /// <param name="node"> The next dialog node </param>
     void InitNextDialogNode(DialogNode node)
     {
         currentNode = node;
@@ -150,7 +167,11 @@ public class DialogUI : MonoBehaviour
     }
 
 
-
+    /// <summary>
+    /// This method is used to get the next node of a dialog option
+    /// </summary>
+    /// <param name="option"> The option that was selected </param>
+    /// <returns>< The next node of the dialog option </returns>
     public Node GetNextNodeOfDialogOption(int option)
     {
         DialogNode dialogNode = currentNode as DialogNode;
