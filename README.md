@@ -1,4 +1,4 @@
-# Node-Based Dialog System for Unity
+# Node Based Dialog System for Unity
 
 This is a node-based dialog system built using the <a href = "https://github.com/Siccity/xNode">xNode</a> framework for Unity. It allows for creating complex dialog trees in an intuitive and visual manner.
 
